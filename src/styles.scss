@@ -42,10 +42,13 @@ background-color: rgb(240, 240, 240);}
 
 .page {
   max-width: 1200px;
-  width: 1200px;
-  padding: 0 20px 0 20px;
+  width: calc(100% - 40px);
   margin: auto;
-  padding-top: 40px;
+  padding: 40px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .header {
@@ -53,11 +56,15 @@ background-color: rgb(240, 240, 240);}
   background-image: url('assets/background.png');
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px 0 20px 0;
   color: white;
   padding: 60px 0 60px 0;
+
+  > h1 {
+    margin-bottom: 0 !important;
+  }
 }
 
 blockquote {
