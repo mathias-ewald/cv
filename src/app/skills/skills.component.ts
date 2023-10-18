@@ -25,7 +25,7 @@ export class SkillsComponent {
 
   public model: Category[] = [
     {
-      name: "Cloud",
+      name: "Public Cloud",
       icon: undefined,
       skills: [
         { name: "Google Cloud Platform", icon: "devicon-python-plain", level: 4 },
@@ -42,6 +42,51 @@ export class SkillsComponent {
         { name: "Angular", icon: "devicon-python-plain", level: 4 },
         { name: "Python", icon: "devicon-python-plain", level: 3 },
         { name: "BASH", icon: "devicon-python-plain", level: 4 },
+      ],
+    },
+    {
+      name: "Infrastructure",
+      icon: undefined,
+      skills: [
+        { name: "Virtualization", icon: "devicon-python-plain", level: 5 },
+        { name: "Linux", icon: "devicon-python-plain", level: 4 },
+        { name: "Container", icon: "devicon-python-plain", level: 5 },
+        { name: "Networking", icon: "devicon-python-plain", level: 4 },
+        { name: "Storage", icon: "devicon-python-plain", level: 3 },
+      ],
+    },
+    {
+      name: "Automation",
+      icon: undefined,
+      skills: [
+        { name: "Ansible", icon: "devicon-python-plain", level: 3 },
+        { name: "Terraform", icon: "devicon-python-plain", level: 4 },
+        { name: "Puppet", icon: "devicon-python-plain", level: 2 },
+      ],
+    },
+    {
+      name: "Monitoring & Logging",
+      icon: undefined,
+      skills: [
+        { name: "Elasticsearch", icon: "devicon-python-plain", level: 4 },
+        { name: "Prometheus", icon: "devicon-python-plain", level: 5 },
+        { name: "Grafana", icon: "devicon-python-plain", level: 4 },
+        { name: "InfluxDB", icon: "devicon-python-plain", level: 3 },
+      ],
+    },    {
+      name: "Databases",
+      icon: undefined,
+      skills: [
+        { name: "PostgreSQL", icon: "devicon-python-plain", level: 3 },
+        { name: "MariaDB / MySQL", icon: "devicon-python-plain", level: 2 },
+        { name: "MongoDB", icon: "devicon-python-plain", level: 4 },
+      ],
+    },
+    {
+      name: "Other Skills",
+      icon: undefined,
+      skills: [
+        { name: "AI/ML", icon: "devicon-python-plain", level: 2 },
       ],
     },
   ];
