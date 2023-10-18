@@ -17,7 +17,7 @@ export class AboutComponent {
     {"icon": "language", "name": "Languages", "value": "German, English" },
     {
       icon: "home", 
-      name: "Address",
+      name: "Home Address",
       value: "2405, Austria",
       action: {
         type: "googlemaps",
@@ -26,7 +26,7 @@ export class AboutComponent {
     },
     {
       icon: "email", 
-      name: "Email", 
+      name: "Email Address", 
       value: "mathias.ewald@googlemail.com", 
       action: {
         type: "mailto",
@@ -35,7 +35,7 @@ export class AboutComponent {
     }, 
     {
       icon: "language", 
-      name: "LinkedIn", 
+      name: "LinkedIn Profile", 
       value: "mathias-ewald", 
       action: {
         type: "href",
@@ -44,7 +44,7 @@ export class AboutComponent {
     },
     {
       icon: "code", 
-      name: "GitHub", 
+      name: "GitHub Profile", 
       value: "mathias-ewald", 
       action: {
         type: "href",
@@ -53,7 +53,7 @@ export class AboutComponent {
     },
     {
       icon: "call", 
-      name: "Address", 
+      name: "Phone Number", 
       value: "+43 664 2811113", 
       action: {
         type: "tel",
