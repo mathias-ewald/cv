@@ -3,7 +3,7 @@
         <mat-icon style="font-size: 400%;" [inline]="true">touch_app</mat-icon>
         <h1 class="title">Experience</h1>
 
-        <blockquote style="width: 60%; max-width: 600px; color: rgb(156, 156, 156); text-align: center;">
+        <blockquote style="width: 60%; max-width: 500px; color: rgb(156, 156, 156); text-align: center;">
             Professional experience is the lens through which theory is transformed into practical wisdom.
         </blockquote>
 
@@ -17,5 +17,7 @@
 <ng-template-outlet *ngIf="contentOnly === true" [ngTemplateOutlet]="content"></ng-template-outlet>
 
 <ng-template #content>
-    Experience
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+    <app-timeline style="max-width: 1000px" [value]="timelineItems"></app-timeline>
+</div>
 </ng-template>

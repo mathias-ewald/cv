@@ -1,0 +1,16 @@
+<div class="timeline">
+    <div *ngFor="let item of value" class="timeline-event">
+        <div class="timeline-point-track-container">
+            <div class="timeline-point" [class.highlight]="item.past"></div>            
+            <div class="timeline-track"></div>
+        </div>
+        <div class="timeline-content" style="gap: 10px;">
+            <div style="display: flex; flex-direction: column; align-items: stretch;">
+                <span class="timeline-date">{{ item.date }}</span>
+                <span class="timeline-title">{{ item.title }}</span>
+                <span class="timeline-subtitle">{{ item.subtitle }}</span>
+            </div>
+            <span class="timeline-text">{{ item.content }}</span>
+        </div>
+    </div>
+</div>

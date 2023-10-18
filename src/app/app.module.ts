@@ -19,6 +19,7 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { OnePagerComponent } from './one-pager/one-pager.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OnePagerComponent } from './one-pager/one-pager.component';
     SkillsComponent,
     EduComponent,
     InfoListComponent,
-    OnePagerComponent
+    OnePagerComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
