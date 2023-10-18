@@ -1,3 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+
 .title {
     text-transform: uppercase;
     font-weight: 500;
