@@ -12,7 +12,6 @@ import { CertsComponent } from './certs/certs.component';
 import { XpComponent } from './xp/xp.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EduComponent } from './edu/edu.component';
-import { ContactComponent } from './contact/contact.component'; 
 import {MatCardModule} from '@angular/material/card'; 
 import {MatListModule} from '@angular/material/list';
 import { InfoListComponent } from './info-list/info-list.component';
@@ -29,7 +28,6 @@ import { OnePagerComponent } from './one-pager/one-pager.component';
     XpComponent,
     SkillsComponent,
     EduComponent,
-    ContactComponent,
     InfoListComponent,
     OnePagerComponent
   ],

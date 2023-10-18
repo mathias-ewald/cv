@@ -21,8 +21,6 @@ export class AppComponent {
     { text: 'Experience', icon: 'touch_app', link: '/xp'},
     { text: 'Skills', icon: 'build', link: '/skills'},
     { text: 'Eduction', icon: 'school', link: '/edu'},
-    { text: 'Contact', icon: 'call', link: '/contact'},
-
     { text: 'One Pager', icon: 'article', link: '/page'},
   ];
 
