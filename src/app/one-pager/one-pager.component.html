@@ -8,16 +8,11 @@
         <button mat-flat-button [style.visibility]="printMode === true ? 'hidden' : ''" color="accent" (click)="download()">Download PDF</button>
     </div>
 
-
     <div class="section">
         <div class="page">
             <app-about [contentOnly]="true"></app-about>
         </div>
     </div>
-
-</div>
-
-<div id="content-section-1">
 
     <div class="section">
         <div class="page">
@@ -25,6 +20,10 @@
             <app-certs [contentOnly]="true"></app-certs>
         </div>
     </div>
+
+</div>
+
+<div id="content-section-1">
 
     <div class="section">
         <div class="page">

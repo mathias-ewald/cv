@@ -17,12 +17,12 @@ export class OnePagerComponent {
 
     this.printMode = true;
     const originalWidth = document.body.style.width;  // Store the original width
-    document.body.style.width = '1200px';  // Set the body width to the desired value
+    document.body.style.width = '1250px';  // Set the body width to the desired value
 
     // Map each content section to a promise that resolves to an object containing the imgData and dimensions
     const canvasPromises = contentSections.map((element, index) =>
       html2canvas(element as HTMLElement).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
+        const imgData = canvas.toDataURL('image/jpeg', 1);
         const imgWidth = 210;  // dimensions of an A4 page
         const imgHeight = canvas.height * imgWidth / canvas.width;
         return { imgData, imgWidth, imgHeight, index };
@@ -39,7 +39,7 @@ export class OnePagerComponent {
         // Adjust x and y positions to center the content
         const x = (210 - imageData.imgWidth) / 2;
         const y = 0;
-        pdf.addImage(imageData.imgData, 'PNG', x, y, imageData.imgWidth, imageData.imgHeight);
+        pdf.addImage(imageData.imgData, 'JPEG', x, y, imageData.imgWidth, imageData.imgHeight);
       
       });
       pdf.save('mathias-ewald.pdf');
