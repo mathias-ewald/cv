@@ -17,7 +17,7 @@ export class XpComponent {
         title: "VMware",
         subtitle: "Presales Solutions Engineer",
         content: "interview customers to understand their strategic goals and business values to achieve, map customer goals to tanzu products and features, measure success",
-        date: "2020 - 2023",
+        date: "2020 - today",
         past: true
     },
     {

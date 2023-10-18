@@ -18,5 +18,7 @@
 
 
 <ng-template #content>
-    Education
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <app-timeline style="max-width: 1000px" [value]="timelineItems"></app-timeline>
+    </div>
 </ng-template>
