@@ -20,6 +20,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { OnePagerComponent } from './one-pager/one-pager.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { AvatarComponent } from './avatar/avatar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     EduComponent,
     InfoListComponent,
     OnePagerComponent,
-    TimelineComponent
+    TimelineComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,

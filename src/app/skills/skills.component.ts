@@ -21,7 +21,7 @@ export interface Skill {
 export class SkillsComponent {
 
   @Input()
-  public contentOnly: boolean = false;
+  public print: boolean = false;
 
   public model: Category[] = [
     {

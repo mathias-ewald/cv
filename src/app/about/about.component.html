@@ -1,18 +1,14 @@
-<ng-container *ngIf="contentOnly === false">
 
+<ng-container *ngIf="print === false">
     <div class="header">
-        <img src="assets/mewald.jpg" class="avatar">
-        <h1 class="title">Mathias Ewald</h1>
-        <span class="subtitle">Platform Adventurer</span>
+        <app-avatar></app-avatar>
     </div>
-
     <div class="page">
-        <ng-template-outlet *ngIf="contentOnly === false" [ngTemplateOutlet]="content"></ng-template-outlet>
+        <ng-template-outlet [ngTemplateOutlet]="content"></ng-template-outlet>
     </div>
-
 </ng-container>
 
-<ng-template-outlet *ngIf="contentOnly === true" [ngTemplateOutlet]="content"></ng-template-outlet>
+<ng-template-outlet *ngIf="print === true" [ngTemplateOutlet]="content"></ng-template-outlet>
 
 <ng-template #content>
     <div class="card-container">

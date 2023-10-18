@@ -9,7 +9,9 @@ import { Info } from '../info-list/info-list.component';
 export class AboutComponent {
 
   @Input()
-  public contentOnly: boolean = false;
+  public print: boolean = false;
+
+
 
   public infos: Info[] = [
     {"icon": "cake", "name": "Birthday", "value": "May 21st, 1986" },

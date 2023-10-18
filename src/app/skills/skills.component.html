@@ -1,18 +1,18 @@
-<ng-container *ngIf="contentOnly === false">
+<ng-container *ngIf="print === false">
 
-    <div class="header" *ngIf="contentOnly === false">
+    <div class="header" *ngIf="print === false">
         <mat-icon style="font-size: 400%;" [inline]="true">build</mat-icon>
         <h1 class="title">Skills</h1>
         <blockquote style="width: 60%; max-width: 600px; color: rgb(156, 156, 156); text-align: center;">Technical skills are a ticket to enter the professional arena, but the ability to work well with others determines the level of success.</blockquote>
     </div>
 
     <div class="page">
-        <ng-template-outlet *ngIf="contentOnly === false" [ngTemplateOutlet]="content"></ng-template-outlet>
+        <ng-template-outlet *ngIf="print === false" [ngTemplateOutlet]="content"></ng-template-outlet>
     </div>
 
 </ng-container>
 
-<ng-template-outlet *ngIf="contentOnly === true" [ngTemplateOutlet]="content"></ng-template-outlet>
+<ng-template-outlet *ngIf="print === true" [ngTemplateOutlet]="content"></ng-template-outlet>
 
 <ng-template #content>
     <div class="container">

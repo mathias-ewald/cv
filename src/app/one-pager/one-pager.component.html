@@ -1,51 +1,45 @@
 <div id="content-section-0">
 
-    <div class="header">
-        <img src="assets/mewald.jpg" class="avatar">
-        <h1 class="title">Mathias Ewald</h1>
-        <span class="subtitle">Platform Adventurer</span>
-        <button style="margin-top: 20px;" mat-flat-button [style.visibility]="printMode === true ? 'hidden' : ''" color="accent" (click)="download()">Download PDF</button>
+    <div class="header" style="gap: 40px;">
+        <app-avatar></app-avatar>
+        <button mat-flat-button color="accent" (click)="download()">Get PDF</button>
     </div>
 
-    <div class="section">
-        <div class="page">
-            <app-about [contentOnly]="true"></app-about>
-        </div>
+    <div class="page">
+        <app-about [print]="true"></app-about>
     </div>
 
-    <div class="section">
-        <div class="page">
-            <h1>Certicates</h1>
-            <app-certs [contentOnly]="true"></app-certs>
-        </div>
+    <div class="banner">
+        <h1>Certificates</h1>
     </div>
 
+    <div class="page">
+        <app-certs [print]="true"></app-certs>
+    </div>
 </div>
 
 <div id="content-section-1">
-
-    <div class="section">
-        <div class="page">
-            <h1>Experience</h1>
-            <app-xp [contentOnly]="true"></app-xp>
-        </div>
+    <div class="banner">
+        <h1>Experience</h1>
     </div>
 
+    <div class="page">
+        <app-xp [print]="true"></app-xp>
+    </div>
 </div>
 
 <div id="content-section-2">
-    <div class="section">
-        <div class="page">
-            <h1>Skills</h1>
-            <app-skills [contentOnly]="true"></app-skills>
-        </div>
+    <div class="banner">
+        <h1>Skills</h1>
+    </div>
+    <div class="page">
+        <app-skills [print]="true"></app-skills>
     </div>
 
-
-    <div class="section">
-        <div class="page">
-            <h1>Education</h1>
-            <app-edu [contentOnly]="true"></app-edu>
-        </div>
+    <div class="banner">
+        <h1>Education</h1>
+    </div>
+    <div class="page">
+        <app-edu [print]="true"></app-edu>
     </div>
 </div>

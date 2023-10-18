@@ -1,9 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
 .container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 
     > * {
         flex: 1 1 calc(50% - 20px);

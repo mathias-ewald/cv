@@ -9,7 +9,7 @@ import { TimelineItem } from '../timeline/timeline.component';
 export class EduComponent {
 
   @Input()
-  public contentOnly: boolean = false;
+  public print: boolean = false;
 
   public timelineItems?: TimelineItem[] = [
     {

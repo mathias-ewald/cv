@@ -1,5 +1,7 @@
 :host {
     gap: 40px;
+    width: 1200px !important;
+    max-width: 1200px !important;
 }
 
 .avatar {
@@ -19,10 +21,9 @@
 
 .page {
     padding-top: 0;
-
-    > h1 {
-        margin-top: 0;
-    }
+}
+h1 {
+    margin-top: 0;
 }
 
 
@@ -30,7 +31,17 @@
     // background-color: rgb(245, 245, 245);
 }
 
+.banner {
+    height: 100px;
+    background-color: #162577;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+}
+
 h1 {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
+    color: white;
 }

@@ -17,7 +17,7 @@ export interface Certificate {
 export class CertsComponent {
 
   @Input()
-  public contentOnly: boolean = false;
+  public print: boolean = false;
 
 
   public model: Certificate[] = [
