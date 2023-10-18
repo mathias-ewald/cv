@@ -1,0 +1,39 @@
+<mat-list>
+
+  <ng-container *ngFor="let info of model; let last = last;">
+    
+    <mat-list-item>
+      <mat-icon matListItemIcon>{{ info.icon }}</mat-icon>
+
+      <div matListItemLine *ngIf="info.valueLink == null" style="display: flex; flex-direction: row; align-items: center; gap: 5px; color: black;">{{info.value}}</div>
+      <div matListItemLine *ngIf="info.valueLink != null" style="display: flex; flex-direction: row; align-items: center; gap: 5px; color: black;">
+        <a *ngIf="linkType(info.valueLink) === 'router'" [routerLink]="info.valueLink">{{info.value}}</a>
+        <a *ngIf="linkType(info.valueLink) === 'href'" [href]="info.valueLink">{{info.value}}</a>
+        <ng-container *ngIf="linkType(info.valueLink) === 'clipboard'">
+            <span>{{ info.value }}</span>
+            <button class="small-button" mat-icon-button [cdkCopyToClipboard]="clipboardValue(info.valueLink)">
+                <mat-icon class="clipboard-icon">content_copy</mat-icon>
+            </button>
+        </ng-container>
+      </div>
+
+      <div matListItemLine *ngIf="info.nameLink == null" style="display: flex; flex-direction: row; align-items: center; gap: 5px; color: grey;">{{info.name}}</div>
+      <div matListItemLine *ngIf="info.nameLink != null" style="display: flex; flex-direction: row; align-items: center; gap: 5px; color: grey;">
+        <a *ngIf="linkType(info.nameLink) === 'router'" [routerLink]="info.nameLink">{{info.name}}</a>
+        <a *ngIf="linkType(info.nameLink) === 'href'" [href]="info.nameLink">{{info.name}}</a>
+        <ng-container *ngIf="linkType(info.nameLink) === 'clipboard'">
+            <span style="color: black">{{ info.name }}</span>
+            <button class="small-button" mat-icon-button [cdkCopyToClipboard]="clipboardValue(info.nameLink)">
+                <mat-icon class="clipboard-icon">content_copy</mat-icon>
+            </button>
+        </ng-container>
+      </div>
+
+    </mat-list-item>
+  </ng-container>
+
+</mat-list>   
+
+<ng-template #link>
+
+</ng-template>

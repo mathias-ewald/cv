@@ -1,0 +1,32 @@
+:host {
+    gap: 40px;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 200% 0;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black
+}
+
+
+.section {
+    padding: 40px 0 40px 0;
+}
+
+.page {
+    padding-top: 0;
+
+    > h1 {
+        margin-top: 0;
+    }
+}
+
+
+.section:nth-child(2n) {
+    background-color: rgb(245, 245, 245);
+}

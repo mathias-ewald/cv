@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    > * {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 200px;
+        max-width: calc(50% - 20px);
+        @media only screen and (max-width: 600px) {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.label {
+    font-size: 80%;
+    color: grey;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 500;
+}

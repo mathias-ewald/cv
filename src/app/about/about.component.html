@@ -1,0 +1,27 @@
+<ng-container *ngIf="contentOnly === false">
+
+    <div class="header">
+        <img src="/assets/mewald.jpg" class="avatar">
+        <h1 class="title">Mathias Ewald</h1>
+        <span class="subtitle">Platform Adventurer</span>
+    </div>
+
+    <div class="page" style="padding-top: 40px;">
+        <mat-card>
+            <mat-card-content>
+            <app-info-list [model]="infos"></app-info-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</ng-container>
+
+<ng-template-outlet *ngIf="contentOnly === true" [ngTemplateOutlet]="content"></ng-template-outlet>
+
+<ng-template #content>
+    <mat-card>
+        <mat-card-content>
+        <app-info-list [model]="infos"></app-info-list>
+        </mat-card-content>
+    </mat-card>
+</ng-template>

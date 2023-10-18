@@ -1,0 +1,39 @@
+<ng-container *ngIf="contentOnly === false">
+
+    <div class="header" *ngIf="contentOnly === false">
+        <mat-icon style="font-size: 400%;" [inline]="true">build</mat-icon>
+        <h1 class="title">Skills</h1>
+        <blockquote style="width: 60%; max-width: 600px; color: rgb(156, 156, 156); text-align: center;">Technical skills are a ticket to enter the professional arena, but the ability to work well with others determines the level of success.</blockquote>
+    </div>
+
+    <div class="page">
+        <ng-template-outlet *ngIf="contentOnly === false" [ngTemplateOutlet]="content"></ng-template-outlet>
+    </div>
+
+</ng-container>
+
+<ng-template-outlet *ngIf="contentOnly === true" [ngTemplateOutlet]="content"></ng-template-outlet>
+
+<ng-template #content>
+    <div class="container">
+
+        <mat-card *ngFor="let category of model">
+            <mat-card-header>
+                <mat-card-title class="title">{{ category.name }}</mat-card-title>
+                <mat-card-subtitle>{{ category.description }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content style="display: flex; flex-direction: column; gap: 10px; padding-top: 20px;">
+                <ng-container *ngFor="let skill of category.skills">
+                    <div style="display: flex; flex-direction: column; align-items: stretch; gap: 5px;">
+                        <div style="display: flex; flex-direction: row; justify-content: space-between; gap: 15px;">
+                            <span class="label">{{ skill.name }}</span>
+                            <span class="label">{{ skill.level / 5 * 100 }}%</span>
+                        </div>
+                        <mat-progress-bar mode="determinate" [value]="skill.level / 5 * 100"></mat-progress-bar>
+                    </div>
+                </ng-container>
+            </mat-card-content>
+        </mat-card>
+    
+    </div>
+</ng-template>
