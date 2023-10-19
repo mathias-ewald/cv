@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 export interface TimelineItem {
   title: string;
   subtitle: string;
+  icon?: string;
   content: string;
   date: string;
   past: boolean;

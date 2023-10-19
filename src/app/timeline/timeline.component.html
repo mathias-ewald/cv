@@ -5,13 +5,16 @@
             <div class="timeline-track"></div>
         </div>
         <div class="timeline-content" [class.timeline-content-highlight]="item.past">
-            <div style="display: flex; flex-direction: column; align-items: stretch;">
-                <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
-                    <span class="timeline-title">{{ item.title }}</span>
-                    <span>-</span>
-                    <span class="timeline-subtitle">{{ item.subtitle }}</span>
+
+            <div style="display: flex; flex-direction: row; align-items: stretch;">
+                <div class="icon-container" *ngIf="item.icon">
+                    <div class="icon" [style.background-image]="'url(' + item.icon + ')'" ></div>
                 </div>
-                <span class="timeline-date">{{ item.date }}</span>
+                <div style="display: flex; flex-direction: column; align-items: stretch;">
+                    <span class="timeline-title">{{ item.title }}</span>
+                    <span class="timeline-subtitle">{{ item.subtitle }}</span>
+                    <span class="timeline-date">{{ item.date }}</span>
+                </div>            
             </div>
             <span class="timeline-text">{{ item.content }}</span>
         </div>
