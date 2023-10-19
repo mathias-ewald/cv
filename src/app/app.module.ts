@@ -33,7 +33,7 @@ import { AvatarComponent } from './avatar/avatar.component';
     InfoListComponent,
     OnePagerComponent,
     TimelineComponent,
-    AvatarComponent
+    AvatarComponent,
   ],
   imports: [
     BrowserModule,

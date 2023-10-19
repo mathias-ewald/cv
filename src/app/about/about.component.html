@@ -3,7 +3,7 @@
     <div class="header">
         <app-avatar></app-avatar>
     </div>
-    <div class="page" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch;">
+    <div class="page" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 0px;">
         <ng-template-outlet [ngTemplateOutlet]="content"></ng-template-outlet>
     </div>
 
@@ -16,16 +16,64 @@
 <ng-template-outlet *ngIf="print === true" [ngTemplateOutlet]="content"></ng-template-outlet>
 
 <ng-template #content>
-    <div class="card-container">
-        <mat-card style="flex: 0 1 50%;">
-            <mat-card-content>
-                <app-info-list [model]="infos.slice(0, 4)"></app-info-list>
-            </mat-card-content>
-        </mat-card>
-        <mat-card style="flex: 0 1 50%">
-            <mat-card-content>
-                <app-info-list [model]="infos.slice(5)"></app-info-list>
-            </mat-card-content>
-        </mat-card>
+
+    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 40px">
+
+        <div class="card-container">
+            <mat-card style="flex: 0 1 50%;">
+                <mat-card-content>
+                    <app-info-list [model]="infos.slice(0, 4)"></app-info-list>
+                </mat-card-content>
+            </mat-card>
+            <mat-card style="flex: 0 1 50%">
+                <mat-card-content>
+                    <app-info-list [model]="infos.slice(5)"></app-info-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 20px">
+
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                <mat-icon class="highlight-icon" [inline]="true">star</mat-icon>
+                <h1 style="text-decoration: underline;">Spotlight</h1>
+                <mat-icon class="highlight-icon" [inline]="true">star</mat-icon>
+            </div>
+
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 40px">
+                <mat-card style="flex: 1 1 300px;">
+                    <mat-card-header>
+                      <img mat-card-avatar src="assets/logo-vmware-tanzu-square-Header.png">
+                      <mat-card-title>VMware Tanzu</mat-card-title>
+                      <mat-card-subtitle>Solution Engineer</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content style="flex: 1 1 100%">
+                        <p>Tanzu is VMware's answer to <strong>modern application development and operations</strong>. As a solutions engineer, I speak to VMware's customers about their <strong>strategic goals</strong> and current pains and find solutions for them based on Tanzu's offerings.</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a mat-button href="https://tanzu.vmware.com" target="_blank">VISIT</a>
+                    </mat-card-actions>
+                </mat-card>
+              
+                <mat-card style="flex: 1 1 300px;">
+                    <mat-card-header>
+                        <img mat-card-avatar src="assets/meanstream-logo.png" width="200px">
+                        <mat-card-title>MeanStream</mat-card-title>
+                        <mat-card-subtitle>ATEM Macro Generator</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content style="flex: 1 1 100%">
+                        <p>MeanStream is a scene and transition management software for <strong>Blackmagic Design ATEM</strong> switchers with the ability to generate reliable native macros to support <strong>live streams, video conferences, webinars</strong> etc.</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a mat-button href="https://meanstream.io" target="_blank">VISIT</a>
+                    </mat-card-actions>
+                </mat-card>
+        
+            </div>    
+        </div>
+
     </div>
+
+
+
 </ng-template>

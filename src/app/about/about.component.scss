@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 40px;
+    gap: 20px;
 }
 
 .card-container {
@@ -21,4 +21,11 @@
         align-items: stretch;
         gap: 20px;
     }
+}
+
+.highlight-icon {
+    color: #FFE900;
+    font-size: 64px;
+    width: 64px;
+    height: 64px;
 }
