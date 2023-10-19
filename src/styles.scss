@@ -43,7 +43,8 @@ background-color: rgb(240, 240, 240);}
 .page {
   max-width: 1200px;
   width: calc(100% - 40px);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
