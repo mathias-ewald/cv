@@ -11,6 +11,7 @@ export class AboutComponent {
   @Input()
   public print: boolean = false;
 
+  public playful: boolean = true;
 
 
   public infos: Info[] = [

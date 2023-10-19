@@ -1,15 +1,11 @@
 
 <ng-container *ngIf="print === false">
-    <div class="header" style="padding-bottom: 0; gap: 40px;">
+    <div class="header" style="">
         <app-avatar></app-avatar>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d196867.3015268487!2d16.708869652048342!3d48.140415480673916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476cf54c0166ff69%3A0xd75d7ff5610c6bd!2s2405!5e0!3m2!1sde!2sat!4v1697656743310!5m2!1sde!2sat" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="page" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 0px;">
         <ng-template-outlet [ngTemplateOutlet]="content"></ng-template-outlet>
     </div>
-
-    <div style="flex: 1 1 100%"></div>
-
 </ng-container>
 
 <ng-template-outlet *ngIf="print === true" [ngTemplateOutlet]="content"></ng-template-outlet>
@@ -30,49 +26,59 @@
                 </mat-card-content>
             </mat-card>
         </div>
-
-        <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; gap: 20px">
-
-            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                <mat-icon class="highlight-icon" [inline]="true">star</mat-icon>
-                <h1 style="text-decoration: underline;">Spotlight</h1>
-                <mat-icon class="highlight-icon" [inline]="true">star</mat-icon>
-            </div>
-
-            <div style="display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 40px">
-                <mat-card style="flex: 1 1 300px;">
-                    <mat-card-header>
-                      <img mat-card-avatar src="assets/logo-vmware-tanzu-square-Header.png">
-                      <mat-card-title>VMware Tanzu</mat-card-title>
-                      <mat-card-subtitle>Solution Engineer</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content style="flex: 1 1 100%">
-                        <p>Tanzu is VMware's answer to <strong>modern application development and operations</strong>. As a solutions engineer, I speak to VMware's customers about their <strong>strategic goals</strong> and current pains and find solutions for them based on Tanzu's offerings.</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <a mat-button href="https://tanzu.vmware.com" target="_blank">VISIT</a>
-                    </mat-card-actions>
-                </mat-card>
-              
-                <mat-card style="flex: 1 1 300px;">
-                    <mat-card-header>
-                        <img mat-card-avatar src="assets/meanstream-logo.png" width="200px">
-                        <mat-card-title>MeanStream</mat-card-title>
-                        <mat-card-subtitle>ATEM Macro Generator</mat-card-subtitle>
-                    </mat-card-header>
-                    <mat-card-content style="flex: 1 1 100%">
-                        <p>MeanStream is a scene and transition management software for <strong>Blackmagic Design ATEM</strong> switchers with the ability to generate reliable native macros to support <strong>live streams, video conferences, webinars</strong> etc.</p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <a mat-button href="https://meanstream.io" target="_blank">VISIT</a>
-                    </mat-card-actions>
-                </mat-card>
-        
-            </div>    
-        </div>
-
     </div>
-
-
-
 </ng-template>
+
+
+<div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: stretch; gap: 20px; margin-top: 0px;"
+    [class.curtain-bar]="print === false && playful == true">
+
+    <div *ngIf="print === false && playful === true" class="curtain curtain-left">
+        <mat-icon style="font-size: 128px; width: 128px; height: 128px; color: gold;">stars</mat-icon>
+    </div>
+    
+    <div style="margin-top: 40px; flex: 1 0 50%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 40px">
+
+        <h1>Highlights</h1>
+
+        <mat-card style="max-width: 500px;">
+            <mat-card-header>
+              <img mat-card-avatar src="assets/logo-vmware-tanzu-square-Header.png">
+              <mat-card-title>VMware Tanzu</mat-card-title>
+              <mat-card-subtitle>Solution Engineer</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content style="flex: 1 1 100%">
+                <p>Tanzu is VMware's answer to <strong>modern application development and operations</strong>. As a solutions engineer, I speak to VMware's customers about their <strong>strategic goals</strong> and current pains and find solutions for them based on Tanzu's offerings.</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button href="https://tanzu.vmware.com" target="_blank">VISIT</a>
+            </mat-card-actions>
+        </mat-card>
+      
+        <mat-card style="max-width: 500px;">
+            <mat-card-header>
+                <img mat-card-avatar src="assets/meanstream-logo.png" width="200px">
+                <mat-card-title>MeanStream</mat-card-title>
+                <mat-card-subtitle>ATEM Macro Generator</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content style="flex: 1 1 100%">
+                <p>MeanStream is a scene and transition management software for <strong>Blackmagic Design ATEM</strong> switchers with the ability to generate reliable native macros to support <strong>live streams, video conferences, webinars</strong> etc.</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a mat-button href="https://meanstream.io" target="_blank">VISIT</a>
+            </mat-card-actions>
+        </mat-card>
+        <div *ngIf="print === false" class="drop-shadow" style="margin-top: 10px;">
+
+        </div>
+    </div>    
+
+    <div *ngIf="print === false && playful == true" class="curtain curtain-right">
+        <mat-icon style="font-size: 128px; width: 128px; height: 128px; color: gold;">stars</mat-icon>
+    </div>
+</div>
+
+<div style="flex: 1 1 100%"></div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d196867.3015268487!2d16.708869652048342!3d48.140415480673916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476cf54c0166ff69%3A0xd75d7ff5610c6bd!2s2405!5e0!3m2!1sde!2sat!4v1697656743310!5m2!1sde!2sat" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
