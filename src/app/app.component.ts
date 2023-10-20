@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ChildrenOutletContexts, RouterLink, RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations';
 
 export interface ToolbarButton {
   text: string;
@@ -9,7 +11,10 @@ export interface ToolbarButton {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    slideInAnimation
+  ]
 })
 export class AppComponent {
 
@@ -23,5 +28,11 @@ export class AppComponent {
     { text: 'Education', icon: 'school', link: '/edu'},
     { text: 'PDF', icon: 'print', link: '/page'},
   ];
+
+  constructor(private contexts: ChildrenOutletContexts) {}
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
 
 }

@@ -9,12 +9,12 @@ import { OnePagerComponent } from './one-pager/one-pager.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
-  { path: 'certs', component: CertsComponent },
-  { path: 'xp', component: XpComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'edu', component: EduComponent },
-  { path: 'page', component: OnePagerComponent },
+  { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' } },
+  { path: 'certs', component: CertsComponent, data: { animation: 'CertsPage' } },
+  { path: 'xp', component: XpComponent, data: { animation: 'XPPage' } },
+  { path: 'skills', component: SkillsComponent, data: { animation: 'SkillsPage' } },
+  { path: 'edu', component: EduComponent, data: { animation: 'EduPage' } },
+  { path: 'page', component: OnePagerComponent, data: { animation: 'PDFPage' } },
 ];
 
 @NgModule({
