@@ -15,18 +15,21 @@ export class EduComponent {
     {
         title: "Fernuniversität Hagen",
         subtitle: "Master of Science (M.Sc.)",
+        icon: 'assets/university.png',
         content: "Computer Science (Informatik)",
         date: "2025 ;)",
         past: true
     },{
       title: "FAU Erlangen-Nürnberg", 
       subtitle: "Bachelor of Arts (B.A.)", 
+      icon: 'assets/university.png',
       content: "Information Systems (Wirtschaftsinformatik)", 
       date: "2010", 
       past: false
     },{
       title: "Gymnasium Pegnitz", 
       subtitle: "High School Diploma (Abitur)", 
+      icon: 'assets/school.png',
       content: "Mathematics, English, Economics, Biology", 
       date: "2006", 
       past: false
