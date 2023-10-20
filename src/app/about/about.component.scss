@@ -30,47 +30,6 @@
     height: 64px;
 }
 
-.curtain-bar {
-    margin-top: -40px;
-    border-top: black;
-    border-top-style: solid;
-    border-top-width: 8px;
-}
-
-.curtain {
-    margin-bottom: 60px;
-    flex: 0 0 33%;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    background: linear-gradient(to right, 
-    rgba(0, 0, 0, 0), 
-    rgba(0, 0, 0, 0.5));
-    background-repeat: repeat;
-    background-size: 50px;
-    background-position: center;
-    background-color: red;
-
-    @media only screen and (max-width: 1000px) {
-        display: none;
-    }
-}
-
-.curtain-right {
-    border-bottom-left-radius: 100%;
-    margin-left: -13%;
-    align-items: flex-end;
-}
-
-.curtain-left {
-    border-bottom-right-radius: 100%;
-    margin-right: -13%;
-    align-items: flex-start;
-}
-
 .drop-shadow {
     margin-top: 40px;
     width: 600px;
