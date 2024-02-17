@@ -1,0 +1,111 @@
+# LaTeX generated files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.lb
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.inx
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.hd
+*.mw
+*.nlo
+*.nls
+*.syg
+*.syi
+*.synctex.gz
+*.run.xml
+*-blx.bib
+*.bcf
+*.nav
+*.snm
+*.vrb
+*.xdy
+*.tdo
+*.loa
+*.thm
+*.dvi
+*.ps
+
+# LaTeX - pdflatex mklatex (e.g., TeXShop)
+*.fdb_latexmk
+
+# LaTeX - pdfsync support
+*.pdfsync
+
+# LaTeX - TeX program output
+*.synctex(busy)
+*.synctex.gz(busy)
+
+# BibTeX auxiliary files
+*.bbl
+*.blg
+
+# pythontex files
+*.pytxcode
+pythontex-files-*/
+
+# minted package output
+_minted*/
+
+# Texpad temporary files
+.texpadtmp
+
+# VS Code LaTeX Workshop extension temporary files
+*.pdf.latexmk
+*.pdfsync
+*.synctex(busy)
+*.synctex.gz(busy)
+*.fls.latexmk
+
+# Directories to ignore
+*/_minted-*/
+*.auxlock
+*.Rhistory
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor backup files
+*~
+*.bak
+*.swp
+*.tmp
+
+# Other common LaTeX-related files
+*.loq
+*.soc
+*.upa
+*.upb
+*.pyc
+*.pyo
+/__pycache__/
+*.sav
+*.sbackup
+*.synctex
+

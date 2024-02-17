@@ -1,7 +1,9 @@
 \documentclass[11pt,a4paper,sans]{moderncv}      
 
+% Include the bionic environment definitions
+
 \moderncvstyle{classic}                           
-\moderncvcolor{blue}                              
+\moderncvcolor{red}                              
 %\renewcommand{\familydefault}{\sfdefault}        
 %\nopagenumbers{}                                 
 
@@ -9,7 +11,7 @@
 \usepackage[scale=0.8]{geometry}
 \setlength{\footskip}{149.60005pt}                
 \setlength{\hintscolumnwidth}{3cm}               
-\setlength{\makecvheadnamewidth}{10cm}           
+%\setlength{\makecvheadnamewidth}{10cm}           
 
 \ifxetexorluatex
   \usepackage{fontspec}
@@ -40,8 +42,44 @@
 \photo[64pt][0.4pt]{picture}                      
 \quote{Do what you love and they will love what you do.}                                
 
+
+
+\ExplSyntaxOn
+\seq_new:N \l_br_main_seq
+\str_new:N \l_br_tmp_str
+\int_new:N \l_br_len_int
+\int_new:N \l_br_mid_int
+% main command --- conditional argument with default 50.
+\NewDocumentCommand\bionic{ O{50} m}{
+    \br_process_all:nn{#2}{#1}
+}
+% split the string at spaces.
+\cs_new_protected:Npn \br_process_all:nn #1 #2 {
+    \seq_set_split:Nnn \l_br_main_seq {~} {#1}
+    \seq_map_inline:Nn \l_br_main_seq {\br_process_word:nn {##1} {#2}}
+    % thanks to @Skillmon suggestion in comments! --- unskip last space
+    \unskip
+}
+% split a word at the #2 percentage, set the first part in bold,
+% emit the second part, emit a space
+\cs_new_protected:Npn \br_process_word:nn #1 #2 {
+    \str_set:Nn \l_br_tmp_str {#1}
+    % find length of the string and (#2) percentage position
+    \int_set:Nn \l_br_len_int {\str_count:N \l_br_tmp_str}
+    \int_set:Nn \l_br_mid_int {\int_eval:n {\l_br_len_int *  #2 / 100}}
+    % split the string: typeset the first part in bold, the second one plain
+    \textbf{\str_range:Nnn \l_br_tmp_str {1}{\l_br_mid_int}}
+    \str_range:Nnn \l_br_tmp_str {\l_br_mid_int+1}{\l_br_len_int}
+    % a space at the end of the word. Will also be emitted for the last word...
+    \space
+}
+\ExplSyntaxOff
+
+
 \begin{document}
 \makecvtitle
+
+\hbox{}
 
 \section{Professional Experience}
 \cventry{2020--tdy}{Solutions Engineer}{VMware}{Vienna}{}{
@@ -90,11 +128,13 @@
 
 \hbox{}
 
+\clearpage{}
+
 \section{Languages}
 \cvitemwithcomment{German}{Primary fluency}{Native speaker.}
 \cvitemwithcomment{English}{Full professional proficiency}{Primary working language.}
 
-\clearpage{}
+\hbox{}
 
 \section{Certifications}
 \cvitem{SML}{Supervised Machine Learning (Standford ONLINE)}
@@ -133,11 +173,15 @@
 
 \hbox{}
  
+\clearpage{}
+
 \section{Technical Skills}
 Throughout my career, I have engaged with a diverse array of tools,
 technologies, and products. While my experience spans a broad spectrum, the
 following list represents the core competencies that I have developed and
 consistently leveraged in a professional setting.\newline{} \hbox{}
+
+\hbox{}
 
 \cvskillentry*{Cloud Stacks}{5}{GCP}{}{Google Cloud Platform}
 \cvskillentry{}{3}{AWS}{}{Amazon Web Services}
@@ -170,17 +214,20 @@ consistently leveraged in a professional setting.\newline{} \hbox{}
 
 \hbox{}
 
-\section{Projects}
+\clearpage{}
 
-\cvitem{\href{https://meanstream.io}{meanstream.io}}{
+\section{Personal Projects}
+
+\cvitem{\href{https://meanstream.io}{MeanStream}}{
   As a Pre-Sales Engineer, I enhanced remote presentation experiences by
-  utilizing Blackmagic Design HDMI switchers, leading the development of an
+  utilizing Blackmagic Design HDMI switchers, leading to the development of an
   online service for managing switcher configurations. This platform allows
   users to design scenes and auto-generate macros for seamless transitions,
   including animations. Built with Spring, Angular, and MongoDB on Google Cloud
   Platform, the service is designed for scalability and reliability, and is
   currently available for free, showcasing my dedication to improving digital
-  presentation tools. \href{https://meanstream.io}{https://meanstream.io}\newline{}
+  presentation tools and ability to develop software using modern frameworks
+  and tools. \href{https://meanstream.io}{https://meanstream.io}\newline{}
 } 
 
 \cvitem{\href{https://github.com/domotik8s/}{DomotiK8s}}{
@@ -194,6 +241,8 @@ consistently leveraged in a professional setting.\newline{} \hbox{}
   ability to innovate and apply advanced technical skills to real-world
   problems. \href{https://github.com/domotik8s/}{https://github.com/domotik8s}
 } 
+
+\hbox{}
 
 \section{Interests}
 \cvitem{Smart Home}{
@@ -221,4 +270,53 @@ consistently leveraged in a professional setting.\newline{} \hbox{}
   I learned to play the piano as a child but only occationally play the guitar,
   today. \newline{}}
  
+\clearpage
+%-----       letter       ---------------------------------------------------------
+\recipient{Company Recruitment team}{RedHat}
+\date{February 16, 2024}
+\subject{Job Application}
+\opening{Dear Sir or Madam,}
+\closing{Best regards,}
+%\signature{0.9}{signature.png}                     
+%\enclosure[Attached]{curriculum vit\ae{}}         
+\makelettertitle
+
+I am writing to express my interest in the Pre-Sales Engineer position at Red
+Hat, as advertised. With a robust background in cloud technologies,
+virtualization, and a proven track record of delivering customer-centric
+solutions, I am excited about the opportunity to contribute to your team.
+
+In my current role as a Solutions Engineer at VMware, I have honed my skills in
+Kubernetes and developer platforms such as TAS (PCF), TAP and TKG, managing key
+accounts in the retail and finance sectors namely DATEV and dmTech. My focus on
+identifying customer pain points and designing tailored solutions aligns with
+the dynamic and solution-oriented approach at Red Hat. My experience in leading
+cross-functional teams through proof-of-concept projects has equipped me with
+the collaborative and technical expertise necessary for a Pre-Sales Engineer
+role.
+
+In this and previous roles, I demonstrated my ability to deploy and configure
+software solutions, ensuring customer success and fostering strong
+relationships. My entrepreneurial background has instilled in me a strong sense
+of ownership and a deep understanding of business requirements, which I believe
+are critical for succeeding in a pre-sales environment.
+
+I am particularly drawn to Red Hat for its commitment to open-source solutions
+and its reputation for innovation. With certifications in Kubernetes, VMware,
+and Cisco, and a Master's degree in Computer Science underway, I am committed to
+continuous learning and staying at the forefront of technology trends.
+
+I am eager to bring my expertise in cloud platforms, virtualization, and
+customer engagement to the Pre-Sales Engineer role at Red Hat. I look forward to
+the opportunity to discuss how my background, skills, and enthusiasms align with
+the needs of your team.
+
+Thank you for considering my application. I am available at your convenience for
+an interview and can be reached at +43 (664) 1486171 or via email at
+mathias.ewald@googlemail.com.
+
+\hbox{}\hbox{}
+
+\makeletterclosing
+
 \end{document}
