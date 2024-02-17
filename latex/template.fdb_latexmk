@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1708162565 "/Users/mewald/Source/cv/latex/template.tex" "template.pdf" "template" 1708162566 0
-  "/Users/mewald/Source/cv/latex/template.tex" 1708162565 8662 6cecd4de5a88bb6b06f3a2cfb5d6d561 ""
+["pdflatex"] 1708162627 "./template.tex" "template.pdf" "template" 1708162628 0
+  "./template.tex" 1708162565 8662 6cecd4de5a88bb6b06f3a2cfb5d6d561 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
@@ -215,8 +215,8 @@
   "moderncvskillmatrix.sty" 1708105008 68745 c2af1d7121cc1b7d08292e30a15859d7 ""
   "moderncvstyleclassic.sty" 1708105008 2388 202bd5dbaeb83ff0c6a63e04dfdc38fe ""
   "picture.jpg" 1708105475 891074 0b6f218d93b4d4b146d0a4374d249f23 ""
-  "template.aux" 1708162566 1255 f14605fb69db481e8ea51aecca2396d4 "pdflatex"
-  "template.out" 1708162566 664 1a62354d802f4020f12f5ebb4b4c68c0 "pdflatex"
+  "template.aux" 1708162627 1255 f14605fb69db481e8ea51aecca2396d4 "pdflatex"
+  "template.out" 1708162627 664 1a62354d802f4020f12f5ebb4b4c68c0 "pdflatex"
   "template.tex" 1708162565 8662 6cecd4de5a88bb6b06f3a2cfb5d6d561 ""
   "tweaklist.sty" 1708105008 2019 cb29d3f6a08bf1e85170b28fbe6588d8 ""
   (generated)
