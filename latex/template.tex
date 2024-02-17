@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper,sans]{moderncv}      
+
+\moderncvstyle{classic}                           
+\moderncvcolor{blue}                              
+%\renewcommand{\familydefault}{\sfdefault}        
+%\nopagenumbers{}                                 
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\setlength{\footskip}{149.60005pt}                
+\setlength{\hintscolumnwidth}{3cm}               
+\setlength{\makecvheadnamewidth}{10cm}           
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage[english]{babel} 
+
+% personal data
+\name{Mathias}{Ewald}
+\title{Cloud Platform Adventurer}                        
+
+\address{Lower Austria, Austria}{}{}
+\email{mathias.ewald@googlemail.com}                              
+\phone[mobile]{+43~(664)~1486171}                  
+\homepage{mathias-ewald.github.io/cv}                        
+\social[linkedin]{mathias-ewald}                   
+\social[github]{mathias-ewald}                     
+\photo[64pt][0.4pt]{picture}                      
+\quote{Do what you love and they will love what you do.}                                
+
+\begin{document}
+\makecvtitle
+
+\section{Professional Experience}
+\cventry{2020--tdy}{Solutions Engineer}{VMware}{Vienna}{}{
+  Leveraged extensive experience in TAS (PCF) and TKGi from Pivotal to manage
+  core customers across retail and finance sectors. Specialized in identifying
+  customer pain points through process analysis, designing tailored solutions
+  from the Tanzu portfolio, and leading proof-of-concept projects with
+  cross-functional customer teams.  \newline{}
+}
+
+\cventry{2018--2020}{Solutions Architect}{Pivotal}{London}{}{
+  Actively engaged in deploying and configuring Pivotal software solutions,
+  focusing on enabling customer self-sufficiency. Played a pivotal role in
+  educating customer teams on best practices and methodologies, ensuring
+  seamless transition and autonomy post-deployment. Fostered strong customer
+  relationships through hands-on training and support, contributing to the
+  sustainable success of Pivotal's professional services.  \newline{}
+}
+
+\cventry{2017--2019}{Co-Founder, Head of Operations}{Meshcloud GmbH}{Frankfurt a.M.}{}{
+  Spearheaded the acquisition of Volkswagen as the inaugural paying client,
+  skillfully translating their business requirements into our solution. Led
+  operations for our public SaaS offering, built on OpenStack, setting a strong
+  foundation for the company's growth and operational excellence.  \newline{}
+}
+
+\cventry{2015--2018}{Co-Founder, Solutions Architect}{evoila GmbH}{Mainz}{}{
+  Pioneered the establishment of an open-source focused team in Nuremberg,
+  driving customer acquisition, project staffing, and ensuring customer success.
+  Actively collaborated with key clients, including Volkswagen, VWFS, and eBay,
+  to deliver tailored solutions and foster strong partnerships. 
+  \newline{}
+}
+
+\cventry{2008--2015}{Freelancer}{}{Nuremberg}{}{
+  Specialized in VMware vSphere solutions during my bachelor's studies,
+  significantly contributing to my income through diverse projects across the
+  DACH region. Expanded expertise into open-source virtualization technologies,
+  including KVM, XenServer, and OpenStack, enhancing my service portfolio.
+  Delivered comprehensive customer projects, trainings, and workshops,
+  demonstrating a strong commitment to client success and technological mastery.
+  \newline{}
+}
+
+\hbox{}
+
+\section{Languages}
+\cvitemwithcomment{German}{Primary fluency}{Native speaker.}
+\cvitemwithcomment{English}{Full professional proficiency}{Primary working language.}
+
+\section{Certifications}
+\cvitem{SML}{Supervised Machine Learning (Standford ONLINE)}
+\cvitem{ALA}{Advanced Learning Algorithms (Standford ONLINE)}
+\cvitem{CKA}{Certified Kubernetes Administrator (The Linux Foundation) (exp.)}
+\cvitem{CKAD}{Certified Kubernetes Application Developer (The Linux Foundation) (exp.)}
+\cvitem{CCNA}{Cisco Certified Network Associate (exp.)}
+\cvitem{VCP-DA}{VMware Certified Advanced Professional - Datacenter Virtualization (exp.)}
+\cvitem{VCP-DV}{VMware Certified Professional - Datacenter Virtualization (exp.)}
+
+\section{Education}
+\cventry{2025}{Master Sc.}{Fernuniversität Hagen}{}{\textit{Computer Science}}{
+  Pursued a Master of Science in Computer Science at Fernuniversität Hagen,
+  nearing completion with only two modules and the thesis remaining. Despite a
+  hiatus to focus on significant professional advancements, I maintained an
+  outstanding academic record. Committed to resuming and concluding the program
+  by 2025.  \newline{}
+}
+
+\cventry{2010}{Bachelor A.}{Friedrich-Alexander Universität Erlangen-Nürnberg}{}{\textit{}}{
+  My Bachelor's degree in Business Information Systems provided me with a solid
+  foundation in economics and business principles, skills that continue to be
+  invaluable when engaging with C-level executives among my clientele.
+  Recognizing my desire for a deeper technical expertise, I simultaneously
+  pursued a more technically-oriented professional role and later embarked on a
+  Master's degree in Computer Science to further enhance my technical
+  proficiency.  \newline{}
+}
+
+\cventry{2006}{High School Diploma (Abitur)}{Gymnasium}{Pegnitz}{\textit{}}{
+  Graduated with a High School Diploma, specializing in Mathematics, English, Economics, and Biology.
+  \newline{}
+}
+
+
+\section{Skill matrix}
+
+\cvskillentry*{Cloud Stacks}{3}{GCP}{}{Google Cloud Platform}
+\cvskillentry{}{3}{AWS}{}{Amazon Web Services}
+\cvskillentry{}{2}{Azure}{}{Microsoft Azure}
+\cvskillentry{}{5}{Tanzu}{}{TAS (PCF), TAP, TKO}
+\cvskillentry{}{4}{OpenStack}{}{$\le$ OpenStack Newton release}
+
+\cvskillentry*{Coding}{4}{Spring}{}{Spring Boot, Spring Data/Cloud}
+\cvskillentry{}{4}{Angular}{}{$>$ Angular 2}
+\cvskillentry{}{2}{Python}{}{$\ge$ 2.7}
+
+\cvskillentry*{Infrastructure}{5}{Virtualization}{}{KVM, vSphere, XenServer}
+\cvskillentry{}{3}{Linux}{}{Debian, RHEL, Ubuntu}
+\cvskillentry{}{5}{Container}{}{Docker, Kubernetes, LXC}
+
+\cvskillentry{}{3}{Networking}{}{Switching, Routing, Firewalls, Load Balancing}
+\cvskillentry{}{3}{Storage}{}{SAN, iSCSI, NFS, Ceph, GlusterFS, NetApp}
+
+\cvskillentry*{Automation}{3}{Ansible}{}{Contribution to OpenStack Kolla}
+\cvskillentry{}{5}{Terraform}{}{GCP, AWS, vSphere, NSX, OpenStack}
+
+\cvskillentry*{Observability}{3}{Elasticsearch}{}{Platform and app logging}
+\cvskillentry{}{5}{Prometheus}{}{Kubernetes and app monitoring}
+\cvskillentry{}{5}{Grafana}{}{with Prometheus}
+
+\cvskillentry*{Databases}{3}{PostgreSQL}{}{Lifecycle management as part of developer platforms}
+\cvskillentry{}{5}{MariaDB/MySQL}{}{Installation, configuration in OpenStack platforms}
+\cvskillentry{}{5}{MongoDB}{}{Lifecycle management and used in private development projects} 
+
+\section{Interests}
+\cvitem{Smart Home}{
+  When our house was built, I had it fully equipped with KNX bus. Today I enjoy
+  fine tuning that installation and adding new functionality on top using Home
+  Assistant and NodeRED running on my private Kubernetes cluster. \newline{}}
+
+  
+\cvitem{AI/ML}{
+  I am deeply passionate about machine learning and artificial intelligence,
+  focusing on the mathematics, algorithms, and MLops necessary for
+  implementing and managing ML systems. My knowledge in this area has grown
+  through self-directed online courses and reading. I am eager to further my
+  expertise by pursuing a master's degree in this field after completing my
+  current studies.\newline{}}
+    
+\cvitem{
+  Athletic and Team Sports}{A lifelong commitment to basketball, complemented by
+  experiences in golf and volleyball, has instilled in me a strong sense of
+  teamwork, discipline, and strategic thinking. Despite stepping back from some
+  sports due to a back injury, I continue to actively participate in basketball
+  and maintain my fitness through running.  \newline{}}
+  
+\cvitem{Music}{
+  I learned to play the piano as a child but only occationally play the guitar,
+  today. \newline{}}
+ 
+\end{document}
